@@ -6,4 +6,5 @@ import com.cpt202.team.Models.Team;
 
 
 public interface TeamRepo extends JpaRepository<Team, Integer> { 
+    
 }

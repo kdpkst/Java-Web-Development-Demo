@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cpt202.team.Models.Team;
-import com.cpt202.team.Repositories.TeamRepo;
+import com.cpt202.team.Services.TeamService;
 
 
 // Spring Annotation
@@ -19,17 +19,16 @@ import com.cpt202.team.Repositories.TeamRepo;
 public class TeamController {
 
     @Autowired
-    private TeamRepo teamRepo;
-
+    private TeamService teamService;
 
     @GetMapping("/list")    
     public List<Team> getList(){
-        return teamRepo.findAll();
+        return teamService.getTeamList();
     }
 
     @PostMapping("/add")
     public Team addTeam(@RequestBody Team t){
-        return teamRepo.save(t);
+        return teamService.addTeam(t);
     }
 
     

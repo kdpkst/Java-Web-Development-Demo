@@ -21,6 +21,5 @@ public class TeamService {
     public List<Team> getTeamList(){
         return teamRepo.findAll();
     }
-    //
     
 }

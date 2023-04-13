@@ -1,2 +1,2 @@
 # Team
-a simple and basic demo for learning java development
+A simple and basic demo for learning Java development
